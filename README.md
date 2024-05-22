@@ -77,12 +77,13 @@ After generating the answer for each instruction in test dataset, we then calcul
 
 <figure style="text-align: center;">
     <div style="display: flex; justify-content: space-around;">
-        <img src="figures/rouge_em_rm_loss_plots/scores.png" alt="Image 1" style="width:33%;"/>
-        <img src="figures/rouge_em_rm_loss_plots/rm_scores.png" alt="Image 2" style="width:33%;"/>
-        <img src="figures/rouge_em_rm_loss_plots/loss_scores.png" alt="Image 3" style="width:33%;"/>
+        <img src="figures/rouge_em_rm_loss_plots/scores.png" alt="Image 1" style="width:32%;"/>
+        <img src="figures/rouge_em_rm_loss_plots/rm_scores.png" alt="Image 2" style="width:32%;"/>
+        <img src="figures/rouge_em_rm_loss_plots/loss_scores.png" alt="Image 3" style="width:32%;"/>
     </div>
     <figcaption><b>Figure 1: Average ROUGE-1, ROUGE-L, and Exact-Match scores (left), average RM scores (middle), and average loss scores (right) of checkpoints fine-tuned on NIV2 (left, middle, right), P3 (middle, right), and Flan-mini (middle, right), all evaluated on unseen tasks.</b></figcaption>
 </figure>
+
 
 <div><a id="Facilitation"></a></div>
 
@@ -124,12 +125,13 @@ bash scripts/eval_by_loss.sh
 
 <figure style="text-align: center;">
     <div style="display: flex; justify-content: space-around;">
-        <img src="figures/pick_cluster/cluster_1.png" alt="Image 1" style="width:33%;"/>
-        <img src="figures/pick_cluster/cluster_2.png" alt="Image 2" style="width:33%;"/>
-        <img src="figures/pick_cluster/cluster_3.png" alt="Image 3" style="width:33%;"/>
+        <img src="figures/pick_cluster/cluster_1.png" alt="Image 1" style="width:32%;"/>
+        <img src="figures/pick_cluster/cluster_2.png" alt="Image 2" style="width:32%;"/>
+        <img src="figures/pick_cluster/cluster_3.png" alt="Image 3" style="width:32%;"/>
     </div>
     <figcaption><b>Figure 2: Sudden decrease in the average loss under cluster scheduling for the three tasks at steps 400 (coqa:1.0.0), 450 (task851), and 150 (task900), respectively.</b></figcaption>
 </figure>
+
 
 
 
@@ -261,12 +263,13 @@ bash scripts/eval_by_loss.sh
 
 <figure style="text-align: center;">
     <div style="display: flex; justify-content: space-around;">
-        <img src="figures/loss_sec3+4_figures/loss_merge_all_main.png" alt="Image 1" style="width:33%;"/>
-        <img src="figures/loss_sec3+4_figures/loss_sharegpt.png" alt="Image 2" style="width:33%;"/>
-        <img src="figures/loss_sec3+4_figures/loss_norobots.png" alt="Image 3" style="width:33%;"/>
+        <img src="figures/loss_sec3+4_figures/loss_merge_all_main.png" alt="Image 1" style="width:32%;"/>
+        <img src="figures/loss_sec3+4_figures/loss_sharegpt.png" alt="Image 2" style="width:32%;"/>
+        <img src="figures/loss_sec3+4_figures/loss_norobots.png" alt="Image 3" style="width:32%;"/>
     </div>
     <figcaption><b>Figure 4: Averaged test loss of three similarity settings (NFT, FFT, and RT) under Test-centric Multi-turn Arrangement on Flan-mini (left), ShareGPT (middle), and NoRobots (right).</b></figcaption>
 </figure>
+
 
 
 
