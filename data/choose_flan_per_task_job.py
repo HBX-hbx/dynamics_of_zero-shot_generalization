@@ -16,8 +16,8 @@ TEST_CNT_PER_TASK = 5 # TODO
 # TODO
 DATASET_SETTING = 'optimal' # cluster / round_robin / optimal
 
-model = SentenceTransformer('/mnt/data/user/tc_agi/user/hebingxiang/model_weights/all-MiniLM-L6-v2').cuda()
-data_path = "/mnt/data/user/tc_agi/user/hebingxiang/datasets/flan-mini/flan_mini.json"
+model = SentenceTransformer('path/to/all-MiniLM-L6-v2').cuda()
+data_path = "path/to/flan_mini.json"
 save_prefix = "/data/checkpoints/datasets/generalist"
 
 dataset = json.load(open(data_path, "r"))

@@ -53,7 +53,7 @@ def initialize():
     parser = argparse.ArgumentParser("")
     
     # model training arguments
-    parser.add_argument("--model_name_or_path", default='/data/private/hebingxiang/model_weights/llama-2-7b')
+    parser.add_argument("--model_name_or_path", default='path/to/llama-2-7b')
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--max_seq_length", default=1024, type=int)
@@ -138,10 +138,6 @@ def load_raw_dataset(args):
         # ======================== eval optimal setting end: one task only ============================
         # TODO: specialist
         dataset = dataset.shuffle(seed=args.seed)
-        
-        # sample_task_list_path = '/data/hbx/dynamics_of_zero_shot_generalization/results/loss/specialist/sample_task_list.txt'
-        # with open(sample_task_list_path, 'r', encoding='utf-8') as f:
-        #     sample_task_list = [line.strip() for line in f]
 
         for data in dataset:
             # TODO:

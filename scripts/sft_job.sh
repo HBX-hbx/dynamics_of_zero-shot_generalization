@@ -40,7 +40,7 @@ SELECT="uniform" # TODO: polar / uniform
 DATASET_NAME="ultrachat" # TODO: p3 / flan / ni / ultrachat
 DATASET_SETTING="random" # TODO: NFT / FFT / RT / max-min / min-max / max / min / random
 
-BASE_PATH="/mnt/data/user/tc_agi/user/hebingxiang"
+BASE_PATH="/data"
 CKPT_BASE_DIRECTORY="/data/checkpoints/TWO2/${TASK}_${METHOD}" # TODO
 
 OPTS=""

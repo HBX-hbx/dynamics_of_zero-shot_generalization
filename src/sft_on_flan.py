@@ -123,7 +123,7 @@ def initialize():
     
     # model training arguments
     parser.add_argument("--lr", type=float, default=1e-5)
-    parser.add_argument("--model_name_or_path", default='/data/private/hebingxiang/model_weights/llama-2-7b')
+    parser.add_argument("--model_name_or_path", default='path/to/llama-2-7b')
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--max_seq_length", default=1024, type=int)

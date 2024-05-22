@@ -13,7 +13,7 @@ DISTRIBUTED_ARGS="--nproc_per_node $GPUS_PER_NODE \
                   --master_addr $MASTER_ADDR \
                   --master_port $MASTER_PORT"
 
-BASE_PATH="/data/hbx"
+BASE_PATH="/data"
 PROJECT_PATH="${BASE_PATH}/dynamics_of_zero_shot_generalization"
 
 OPTS=""

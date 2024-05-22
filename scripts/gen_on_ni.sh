@@ -15,7 +15,7 @@ DISTRIBUTED_ARGS="--nproc_per_node $GPUS_PER_NODE \
                   --master_port $MASTER_PORT"
 
 DATASET_SETTING="random" # TODO: random / round_robin / cluster / optimal
-BASE_PATH="/data/hbx"
+BASE_PATH="/data"
 PROJECT_PATH="${BASE_PATH}/dynamics_of_zero_shot_generalization"
 CKPT_DIRECTORY="${PROJECT_PATH}/ckpts/ni/checkpoints_ni_${DATASET_SETTING}"
 CKPT_STRIDE=10  # the stride for saving ckpts

@@ -21,7 +21,7 @@ DISTRIBUTED_ARGS="--nproc_per_node $GPUS_PER_NODE \
                   --master_addr $MASTER_ENDPOINT \
                   --master_port $MASTER_PORT"
 
-BASE_PATH="/mnt/data/user/tc_agi/user/hebingxiang"
+BASE_PATH="/data"
 
 SEED=0 # TODO
 # wiki_bio_key_content

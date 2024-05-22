@@ -17,7 +17,7 @@ from transformers import AutoTokenizer, AutoModel
 
 def get_dataset(setting: str):
     assert setting in ['random', 'round_robin', 'cluster']
-    data_dir = f"/data/hbx/datasets/flan_mini_{setting}"
+    data_dir = f"path/to/flan_mini_{setting}"
     dataset = load_from_disk(data_dir)
     return dataset['train'], dataset['test']
 
@@ -49,14 +49,7 @@ max_test_samples_per_task = 5
 SEED = 0 # TODO: 0 / 1 / 2
 all_test_dataset = all_test_dataset.shuffle(seed=SEED)
 
-sample_task_list_path = '/data/hbx/dynamics_of_zero_shot_generalization/results/loss/specialist/sample_task_list.txt'
-with open(sample_task_list_path, 'r', encoding='utf-8') as f:
-    sample_task_list = [line.strip() for line in f]
-
 for data in all_test_dataset:
-    # TODO:
-    # if data['task'] not in sample_task_list: continue
-    # TODO END
     if data['task'] not in task_cnt_dict:
         test_dataset[data['task']] = []
         task_cnt_dict[data['task']] = 0
@@ -67,7 +60,7 @@ for data in all_test_dataset:
 
 metrics = {}
 
-model = SentenceTransformer('/mnt/data/user/tc_agi/user/hebingxiang/model_weights/all-MiniLM-L6-v2')
+model = SentenceTransformer('path/to/all-MiniLM-L6-v2')
 model.cuda()
 
 print("Processing test dataset...")
@@ -137,7 +130,7 @@ calc(random_train_dataset, "random")
 calc(cluster_train_dataset, "cluster")
 
 
-similarity_save_dir = f'/data/hbx/dynamics_of_zero_shot_generalization/results/similarity/similarity_{SEED}/{CALC_METHOD}'
+similarity_save_dir = f'path/to/similarity_{SEED}/{CALC_METHOD}'
 
 colors = ["#82B0D2", "#FFBE7A", "#FA7F6F"]
 

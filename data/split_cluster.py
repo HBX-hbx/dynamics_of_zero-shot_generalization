@@ -23,7 +23,7 @@ DATASET_SETTING = 'random' # cluster / round_robin / random
     ]
 }
 """
-dataset = json.load(open('/data/hbx/datasets/flan-mini/flan_mini.json', "r"))
+dataset = json.load(open('path/to/flan_mini.json', "r"))
 task_list = {}
 for data in tqdm(dataset):
     task_name = data['source']
@@ -94,8 +94,8 @@ dataset_dict = DatasetDict({
     'train': Dataset.from_pandas(pd.DataFrame(train_data)),
     'test': Dataset.from_pandas(pd.DataFrame(eval_data))
 })
-dataset_dict.save_to_disk(f'/data/hbx/datasets/flan_mini_{DATASET_SETTING}')
+dataset_dict.save_to_disk(f'path/to/save/flan_mini_{DATASET_SETTING}')
 
-new_dataset = load_from_disk(f'/data/hbx/datasets/flan_mini_{DATASET_SETTING}')
+new_dataset = load_from_disk(f'path/to/save/flan_mini_{DATASET_SETTING}')
 
 embed()

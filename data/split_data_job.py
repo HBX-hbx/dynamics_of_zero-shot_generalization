@@ -66,7 +66,7 @@ DATASET_SETTING = 'fine' # TODO: coarse / fine
     ]
 }
 """
-data_path = "/mnt/data/user/tc_agi/user/hebingxiang/datasets/flan-mini/flan_mini.json"
+data_path = "path/to/flan_mini.json"
 dataset = json.load(open(data_path, "r"))
 task_list = {}
 for data in tqdm(dataset):
@@ -109,7 +109,7 @@ else:
     assert chosen_task in eval_key_list
     eval_data.extend(random.sample(task_list[chosen_task]['data'], min(100, len(task_list[chosen_task]['data']))))
 
-model = SentenceTransformer('/mnt/data/user/tc_agi/user/hebingxiang/model_weights/all-MiniLM-L6-v2')
+model = SentenceTransformer('path/to/all-MiniLM-L6-v2')
 model.cuda()
 
 """

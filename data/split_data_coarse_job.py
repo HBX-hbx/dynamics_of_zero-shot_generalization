@@ -20,7 +20,7 @@ chosen_task = "merge"
 method = "weighted" # TODO: mt / ot / weighted
 DATASET_SETTING = 'coarse'
 
-data_path = "/mnt/data/user/tc_agi/user/hebingxiang/datasets/flan-mini/flan_mini.json"
+data_path = "path/to/flan_mini.json"
 dataset = json.load(open(data_path, "r"))
 task_list = {}
 for data in tqdm(dataset):
@@ -65,12 +65,9 @@ else:
     assert chosen_task in eval_key_list
     eval_data.extend(random.sample(task_list[chosen_task]['data'], min(100, len(task_list[chosen_task]['data']))))
 
-model = SentenceTransformer('/mnt/data/user/tc_agi/user/hebingxiang/model_weights/all-MiniLM-L6-v2')
+model = SentenceTransformer('path/to/all-MiniLM-L6-v2')
 model.cuda()
 
-"""
-给定某一个泛化任务的测试数据集 eval_data，找出特定的训练数据集分布，使得在这个分布的训练集上训出来的一系列 ckpt，在这个测试集上的 loss 呈现漂亮的泛化曲线
-"""
 # encoding the train / test dataset
 train_encoded = []
 for d in tqdm(train_data):

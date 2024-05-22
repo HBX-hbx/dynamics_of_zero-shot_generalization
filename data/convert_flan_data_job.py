@@ -28,7 +28,7 @@ chosen_task = "merge_all"
 method = "mt" # TODO: ot / mt / weighted
 DATASET_SETTING = 'fine' # TODO: coarse / fine
 
-data_path = "/mnt/data/user/tc_agi/user/hebingxiang/datasets/flan-mini/flan_mini.json"
+data_path = "path/to/flan_mini.json"
 dataset = json.load(open(data_path, "r"))
 task_list = {}
 for data in tqdm(dataset):
@@ -86,7 +86,7 @@ for data in eval_dataset:
 
 # TODO: embedding begin
 
-embed_model = SentenceTransformer('/mnt/data/user/tc_agi/user/hebingxiang/model_weights/all-MiniLM-L6-v2').cuda()
+embed_model = SentenceTransformer('path/to/all-MiniLM-L6-v2').cuda()
 print("begin train embedding")
 train_encoded = embed_model.encode([f"{data['data'][0]} {data['data'][1]}" for data in tqdm(train_dataset)])
 print("begin eval embedding")

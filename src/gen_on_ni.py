@@ -26,7 +26,7 @@ def initialize():
     # get arguments
     parser = argparse.ArgumentParser("")
     # model arguments
-    parser.add_argument("--model_name_or_path", default='/data/private/hebingxiang/model_weights/llama-2-7b')
+    parser.add_argument("--model_name_or_path", default='path/to/llama-2-7b')
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--max_seq_length", default=2048, type=int)
     parser.add_argument("--batch_size_per_device", default=2, type=int)

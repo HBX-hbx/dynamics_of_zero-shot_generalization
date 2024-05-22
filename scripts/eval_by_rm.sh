@@ -15,9 +15,9 @@ DISTRIBUTED_ARGS="--nproc_per_node $GPUS_PER_NODE \
                   --master_port $MASTER_PORT"
 
 DATASET_NAME="p3" # TODO
-BASE_PATH="/data/hbx"
+BASE_PATH="/data"
 PROJECT_PATH="${BASE_PATH}/dynamics_of_zero_shot_generalization"
-HDFS_PATH="/mnt/data/user/tc_agi/user/hebingxiang"
+HDFS_PATH="/data"
 
 OPTS=""
 OPTS+=" --model_name_or_path ${HDFS_PATH}/model_weights/llama-2-13b"
